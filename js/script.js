@@ -6,3 +6,15 @@ const message = document.getElementById('message');
 const instructions = document.getElementById('instructions');
 const button = document.getElementById('button');
 
+const generaterandomnumbers = (min, max) => {
+  const random = [];
+
+  while(random.length < 5){
+    const number = Math.floor(Math.random() * (max - min +1)) + min;
+
+    if (random.includes(number) === false){
+      random.push(number);
+    }
+  }
+  return random;
+}

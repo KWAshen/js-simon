@@ -6,7 +6,7 @@ const message = document.getElementById('message');
 const instructions = document.getElementById('instructions');
 const button = document.getElementById('button');
 
-const generaterandomnumbers = (min, max) => {
+const generateRandomNumbers = (min, max) => {
   const random = [];
 
   while(random.length < 5){
@@ -17,4 +17,42 @@ const generaterandomnumbers = (min, max) => {
     }
   }
   return random;
+}
+
+
+const numbers = generateRandomNumbers(1,30);
+console.log(number);   
+
+let time = 10;
+
+for(let i=0; i<numbers.length; i++);{
+  numberslist.innerHTML += `<li class="list-item">${numbers[i]}</li>`;
+}
+
+
+countdownelemnt.innertext = time;
+
+const countdown = setInterval(() => {
+time--;
+countdownelemnt.innertext =time;
+
+if(time === 0){
+  clearInterval(countdown);
+
+  form.classList.remove('d-none');
+
+  numberslist.classList.add('d-none');
+  instructions.innertext = 'inserire i numeri'
+}
+
+},1000);
+
+const confirm = (e) =>{
+  e.preventDefault();
+
+  const userNumebers = [];
+
+  for(let i=0; i<inputs.length; i++){
+    userNumbers.push(inputs[i].value)
+  }
 }
